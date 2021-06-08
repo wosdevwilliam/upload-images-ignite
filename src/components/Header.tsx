@@ -1,5 +1,7 @@
+// Importações bibliotecas
 import { Box, Flex, Button, useDisclosure, Image } from '@chakra-ui/react';
 
+// Importações Locais
 import { ModalAddImage } from './Modal/AddImage';
 
 export function Header(): JSX.Element {

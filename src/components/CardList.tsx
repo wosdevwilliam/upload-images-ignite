@@ -1,6 +1,9 @@
+// Importações bibliotecas
 import { SimpleGrid, useDisclosure } from '@chakra-ui/react';
 import { useState } from 'react';
 import { Card } from './Card';
+
+// Importações Locais
 import { ModalViewImage } from './Modal/ViewImage';
 
 interface Card {

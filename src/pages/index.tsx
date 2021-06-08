@@ -2,6 +2,7 @@ import { Button, Box } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { useInfiniteQuery } from 'react-query';
 
+// Importações Locais
 import { Header } from '../components/Header';
 import { CardList } from '../components/CardList';
 import { api } from '../services/api';
@@ -37,13 +38,11 @@ export default function Home(): JSX.Element {
   }, [data]);
 
   // TODO RENDER LOADING SCREEN
-
   if (isLoading) {
     return <Loading />;
   }
 
   // TODO RENDER ERROR SCREEN
-
   if (isError) {
     return <Error />;
   }
