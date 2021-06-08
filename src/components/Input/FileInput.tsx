@@ -92,7 +92,9 @@ const FileInputBase: ForwardRefRenderFunction<
       setCancelToken(source);
 
       const config = {
-        headers: { 'content-type': 'multipart/form-data' },
+        headers: {
+          'content-type': 'multipart/form-data',
+        },
         onUploadProgress: (e: ProgressEvent) => {
           setProgress(Math.round((e.loaded * 100) / e.total));
         },
@@ -109,6 +111,7 @@ const FileInputBase: ForwardRefRenderFunction<
         setImageUrl(response.data.data.url);
         setLocalImageUrl(URL.createObjectURL(event.target.files[0]));
       } catch (err) {
+        console.log(err);
         if (err?.message === 'Cancelled image upload.') return;
 
         toast({
